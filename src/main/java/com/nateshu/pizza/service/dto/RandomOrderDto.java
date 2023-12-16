@@ -1,6 +1,5 @@
 package com.nateshu.pizza.service.dto;
 
-
 import lombok.Data;
 
 @Data

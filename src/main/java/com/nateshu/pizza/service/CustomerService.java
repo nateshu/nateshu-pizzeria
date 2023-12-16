@@ -14,8 +14,7 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
 
-
-    public CustomerEntity findByPhone(String phone){
-        return  this.customerRepository.findByPhone(phone);
+    public CustomerEntity findByPhone(String phone) {
+        return this.customerRepository.findByPhone(phone);
     }
 }

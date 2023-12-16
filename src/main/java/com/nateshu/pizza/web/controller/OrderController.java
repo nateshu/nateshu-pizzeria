@@ -1,6 +1,5 @@
 package com.nateshu.pizza.web.controller;
 
-
 import com.nateshu.pizza.persitence.entity.OrderEntity;
 import com.nateshu.pizza.persitence.projection.OrderSummary;
 import com.nateshu.pizza.service.OrderService;
@@ -14,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
-    private  final OrderService orderService;
+    private final OrderService orderService;
 
     @Autowired
     public OrderController(OrderService orderService) {
@@ -22,23 +21,23 @@ public class OrderController {
     }
 
     @GetMapping
-    public ResponseEntity<List<OrderEntity>> getAll(){
-        return  ResponseEntity.ok(this.orderService.getAll());
+    public ResponseEntity<List<OrderEntity>> getAll() {
+        return ResponseEntity.ok(this.orderService.getAll());
     }
 
     @GetMapping("/today")
-    public ResponseEntity<List<OrderEntity>> getTodayOrders(){
-        return  ResponseEntity.ok(this.orderService.getTodayOrders());
+    public ResponseEntity<List<OrderEntity>> getTodayOrders() {
+        return ResponseEntity.ok(this.orderService.getTodayOrders());
     }
 
     @GetMapping("/outside")
-    public ResponseEntity<List<OrderEntity>> getOutOrders(){
-        return  ResponseEntity.ok(this.orderService.getOutsideOrders());
+    public ResponseEntity<List<OrderEntity>> getOutsideOrders() {
+        return ResponseEntity.ok(this.orderService.getOutsideOrders());
     }
 
     @GetMapping("/customer/{id}")
-    public ResponseEntity<List<OrderEntity>> getOutOrders(@PathVariable String id){
-        return  ResponseEntity.ok(this.orderService.getCustomerOrders(id));
+    public ResponseEntity<List<OrderEntity>> getOutsideOrders(@PathVariable String id) {
+        return ResponseEntity.ok(this.orderService.getCustomerOrders(id));
     }
 
     @GetMapping("/summary/{id}")
