@@ -1,0 +1,1 @@
+Pizzeria application, implementing spring-security internally thanks to its autoconfiguration and filters components, we also added our own custom configuration to guarantee that the authentication was correct, we used in-memory authentication, database authentication and authentication management using Jason web token review.
